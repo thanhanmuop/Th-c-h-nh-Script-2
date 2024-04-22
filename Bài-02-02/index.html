@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introduction to Charts</title>
+<!-- Load Chart.js library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px; /* Add padding for content */
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    /* Style for each chart container */
+    .chart-container {
+        margin-bottom: 20px; /* Add space between each chart */
+    }
+
+    /* Style for chart title */
+    h2 {
+        margin-top: 10px; /* Add space above each chart title */
+    }
+
+    /* Style for chart description */
+    p {
+        margin-bottom: 10px; /* Add space below each chart description */
+    }
+
+    /* Style for dot navigation */
+
+</style>
+</head>
+<body>
+
+<h1>Introduction to Charts</h1>
+
+<!-- Scatter Plot -->
+<div id="scatterContainer" class="chart-container">
+    <h2>Scatter Plot</h2>
+    <canvas id="scatterChart" width="300" height="150"></canvas>
+    <p>
+        Scatter plot là một loại biểu đồ hiển thị dữ liệu bằng các điểm được phân tán trên một mặt phẳng.
+    </p>
+</div>
+
+<!-- Line Chart -->
+<div id="lineContainer" class="chart-container">
+    <h2>Line Chart</h2>
+    <canvas id="lineChart" width="300" height="150"></canvas>
+    <p>
+        Line chart là một loại biểu đồ thống kê trong đó mỗi điểm dữ liệu được biểu diễn bằng một điểm trên đồ thị và những điểm dữ liệu liên tiếp được kết nối bằng một đường thẳng.
+    </p>
+</div>
+
+<!-- Bar Chart -->
+<div id="barContainer" class="chart-container">
+    <h2>Bar Chart</h2>
+    <canvas id="barChart" width="300" height="150"></canvas>
+    <p>
+        Bar chart là một loại biểu đồ hiển thị dữ liệu bằng các thanh dọc hoặc ngang đại diện cho các giá trị.
+    </p>
+</div>
+
+<!-- Pie Chart -->
+<div id="pieContainer" class="chart-container">
+    <h2>Pie Chart</h2>
+    <canvas id="pieChart" width="300" height="150"></canvas>
+    <p>
+        Pie chart là một loại biểu đồ hình tròn được chia thành các phần tương ứng với tỷ lệ phần trăm của dữ liệu.
+    </p>
+</div>
+
+<!-- Donut Chart -->
+<div id="donutContainer" class="chart-container">
+    <h2>Donut Chart</h2>
+    <canvas id="donutChart" width="300" height="150"></canvas>
+    <p>
+        Donut chart là một loại biểu đồ hình tròn tương tự như pie chart, nhưng có một vòng trống ở giữa.
+    </p>
+</div>
+
+<!-- Bubble Chart -->
+<div id="bubbleContainer" class="chart-container">
+    <h2>Bubble Chart</h2>
+    <canvas id="bubbleChart" width="300" height="150"></canvas>
+    <p>
+        Bubble chart là một loại biểu đồ hiển thị dữ liệu bằng các hình tròn với đường kính và màu sắc khác nhau.
+    </p>
+</div>
+
+<!-- Dot navigation -->
+<div class="dot-container">
+    <span class="dot" onclick="showChart(0)"></span>
+    <span class="dot" onclick="showChart(1)"></span>
+    <span class="dot" onclick="showChart(2)"></span>
+    <span class="dot" onclick="showChart(3)"></span>
+    <span class="dot" onclick="showChart(4)"></span>
+    <span class="dot" onclick="showChart(5)"></span>
+</div>
+
+<script>
+    // Scatter Plot
+    var scatterCtx = document.getElementById('scatterChart').getContext('2d');
+    var scatterChart = new Chart(scatterCtx, {
+        type: 'scatter',
+        data: {
+            datasets: [{
+                label: 'Scatter Plot Example',
+                data: [{
+                    x: 5,
+                    y: 1
+                }, {
+                    x: 6,
+                    y: 2
+                }, {
+                    x: 4,
+                    y: 10
+                }]
+            }]
+        }
+    });
+
+    // Line Chart
+    var lineCtx = document.getElementById('lineChart').getContext('2d');
+    var lineChart = new Chart(lineCtx, {
+        type: 'line',
+        data: {
+            labels: ['A', 'B', 'C', 'D'],
+            datasets: [{
+                label: 'Line Chart Example',
+                data: [5, 3, 7, 2]
+            }]
+        }
+    });
+
+    // Bar Chart
+    var barCtx = document.getElementById('barChart').getContext('2d');
+    var barChart = new Chart(barCtx, {
+        type: 'bar',
+        data: {
+            labels: ['A', 'B', 'C', 'D'],
+            datasets: [{
+                label: 'Bar Chart Example',
+                data: [584, 2245, 541, 245]
+            }]
+        }
+    });
+
+    // Pie Chart
+    var pieCtx = document.getElementById('pieChart').getContext('2d');
+    var pieChart = new Chart(pieCtx, {
+        type: 'pie',
+        data: {
+            labels: ['A', 'B', 'C', 'D'],
+            datasets: [{
+                label: 'Pie Chart Example',
+                data: [56, 35, 72, 24]
+            }]
+        }
+    });
+
+    // Donut Chart
+    var donutCtx = document.getElementById('donutChart').getContext('2d');
+    var donutChart = new Chart(donutCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['A', 'B', 'C', 'D'],
+            datasets: [{
+                label: 'Donut Chart Example',
+                data: [5, 3, 7, 2]
+            }]
+        }
+    });
+
+    // Bubble Chart
+    var bubbleCtx = document.getElementById('bubbleChart').getContext('2d');
+    var bubbleChart = new Chart(bubbleCtx, {
+        type: 'bubble',
+        data: {
+            datasets: [{
+                label: 'Bubble Chart Example',
+                data: [{
+                    x: 10,
+                    y: 36,
+                    r: 20
+                }, {
+                    x: 25,
+                    y: 54,
+                    r: 30
+                }, {
+                    x: 31,
+                    y: 82,
+                    r: 10
+                }]
+            }]
+        }
+    });
+
+    // Function to show/hide charts based on dot navigation
+    function showChart(index) {
+        var containers = document.querySelectorAll('.chart-container');
+        containers.forEach(function(container, i) {
+            if (i === index) {
+                container.style.display = 'block';
+            } else {
+                container.style.display = 'none';
+            }
+        });
+
+        var dots = document.querySelectorAll('.dot');
+        dots.forEach(function(dot, i) {
+            if (i === index) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

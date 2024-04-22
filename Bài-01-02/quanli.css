@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 0fr 1fr;
+}
+
+.leftside{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100vh;
+    background: #808080; /* Changed color to gray */
+}
+.leftside ul{
+    list-style: none;
+    margin-top: 10px;
+}
+
+.leftside ul li{
+    padding: 15px;
+    background: #808080; /* Changed color to gray */
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;  /* reduce width to create padding effect */
+    text-align: center;  /* center the text in the middle */
+}
+
+.leftside ul li a{
+    color: #fff; /* Same color as the list item */
+    text-decoration: none; /* Removes underline from link */
+    transition: 0.3s; /* Smooth color transition */
+}
+
+/* Change color on hover */
+.leftside ul li a:hover{
+    color: #f1f1f1; /* Slightly lighter color on hover */
+}
+
+.leftside ul li:hover{
+    background: #606060; /* Changed color to dark gray when hovered */
+    border-radius: 10px; /* rounded corners when hovered */
+}
+.top {background-color: #404040;
+    height: 50px;
+ 
+    width: 100%;
+}
+.space {
+    padding-right: 25px;
+}
+.right {
+    width: 100%;
+}
+.right .top1 {
+    display: flex;
+    align-items: center; 
+    padding: 10px; 
+    background-color: #f4f4f4; 
+    width: 100%;
+}
+
+.right .top1 i.icon {
+    margin-right: 10px;
+    color: #333; 
+}
+
+.right .top1 p {
+    margin: 0; 
+    color: #555; 
+    font-size: 16px; 
+}
+
+.right .top1 button.them {
+    padding: 8px 16px; 
+    background-color: #33B2A7; 
+    color: white; 
+    border: none;  
+    cursor: pointer; 
+    transition: background-color 0.3s;
+    color : white;
+}
+.right .top1 p {
+    padding-right: 10px;
+}
+.right .top1 button.them:hover {
+    background-color: #0056b3; 
+}
+.top1 {
+    padding-bottom: 30px;
+}
+.mid {
+    padding-top: 30px;
+}
+.mid button {
+    padding-left: 10px;
+    height: 30px;
+}
+.choose3 {
+    background-color:#59C0BD ;
+    border: none;
+}
+.choose4 {
+    background-color: #F56D72;
+    border: none
+}
+.table2 {
+    width: 100%; 
+    border-collapse: collapse; 
+    font-family: Arial, sans-serif; 
+    margin: 20px 0; 
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1); 
+}
+
+.table2 th, .table2 td {
+    border: 1px solid #ddd; 
+    padding: 8px; 
+    text-align: left; 
+
+}
+
+.table2 th {
+    background-color: #f9f9f9; 
+    color: #333; 
+    font-weight: bold; 
+}
+
+.table2 tr:nth-child(even) {
+    background-color: #f2f2f2; 
+}
+
+.table2 tr:hover {
+    background-color: #e8e8e8; }
+
+.table2 img {
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+}
+.table {
+    width: 100%;
+}
+.tb1{
+   width: 100%; 
+}
+.tb1 .title {
+    background-color: #33B2A7;
+    height: 50px;
+    width: 100%;
+    text-align: left;
+    border-radius: 3px;
+    padding-left: 10px;
+    
+}
+.mid {
+    padding-bottom: 10px;
+}
+.dinh .button-item8{
+    background-color: #2ABBA7;
+
+}
+.table2 th, .table2 td ul {
+    padding: 20px;
+}
